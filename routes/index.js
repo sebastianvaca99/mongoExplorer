@@ -1,9 +1,17 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
+const mu = require("../db/MongoUtils.js");
+
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function(req, res) {
+  mu.databases.listDatabases().then(databases =>
+    res.render("index", {
+      databases
+    })
+  );
 });
+
+
 
 module.exports = router;

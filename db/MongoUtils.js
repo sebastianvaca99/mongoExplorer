@@ -19,6 +19,7 @@ function MongoUtils() {
       )
       .then(dbs => {
         console.log("Mongo databases", dbs);
+        return dbs.databases;
       })
       .finally(() => client.close());
   };
@@ -42,5 +43,6 @@ function MongoUtils() {
       })
       .finally(() => client.close());
   };
+  return mu;
 }
 module.exports = MongoUtils();

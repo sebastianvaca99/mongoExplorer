@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="MongoDbExplorer" />
+    <meta name="keywords" content="MongoDb " />
+    <meta name="author" content="Juan Sebastian Vaca" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -15,21 +18,74 @@
       crossorigin="anonymous"
     />
 
-    <title><%= title %></title>
+    <title>Mongo Explorer</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <div>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </div>
-    <div class="row">
-      <div class = "col ">
-          
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
+      <div class="container">
+          <a class="navbar-brand" href="./index.html"> Juan sebastian Vaca</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#Who-i-am">Who i am</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#Education">My Education</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#Hobbies">Hobbies</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#Contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a aria-label="Github link 3" class="nav-link" href="./hojavida.html" target="_self"  rel="noreferrer">Skills</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-      <%- include("./databases.ejs") %>
-    </div>
+  </nav>
+    <br>
+    <br>
+    <br>
+    <br>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, assumenda sequi ab reiciendis velit ullam unde ducimus sapiente quia laboriosam saepe dolorem inventore in quaerat explicabo, ratione dolores culpa iusto.
+          </p>
+        </div>
+      </div>
+    </div>
+     
+    <select id="bdropdown" class="ui fluid dropdown" onchange= traercol(); >
+      <option disabled selected value> -- select an option --</option>
+      <% databases.databases.forEach(database => { %>
+      <option> <%= database.name %> </option>
+      <% }); %>
+    </select>
+    <select id="cdropdown" class="ui fluid dropdown" onchange= traercontenido();>
+      <option disabled selected value> -- select an option --</option>
+    </select>
+    <ul id= "contentList">
+    </ul>
+    
+    <div id="myContacts">
+
+    </div>
+    </select>
+    <div class="row">
+
+      <%- include("./viewcontent.ejs") %>
+    </div>
+    <script src= "../javascripts/contents.js"></script>
+    <script src= "../javascripts/collections.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

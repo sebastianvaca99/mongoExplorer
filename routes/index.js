@@ -40,4 +40,17 @@ router.get("/databases", function(req, res) {
   });
 });
 
+router.post("/item/content/:database/:collection", (req, res) => {
+  console.log("params", req.body);
+  const database =  req.params.database;
+  const collection = req.params.collection;
+  const grade = {
+    name: req.body.name,
+    grade: +req.body.grade,
+    timestamp: new Date()
+  };
+
+  mu.grades.insert(grade).then(res.redirect("/"));
+});
+
 module.exports = router;

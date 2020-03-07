@@ -27,9 +27,14 @@ function traercontenido() {
 }
 
 const generateTable = contents => {
-  const numberRegisters = contents.lenght;
+  const numberRegisters = contents.length;
+  console.log(contents);
   if (numberRegisters > 0) {
     const table = document.createElement("table");
+    table.style.width = "50%";
+    table.setAttribute("border", "1");
+    table.setAttribute("cellspacing", "0");
+    table.setAttribute("cellpadding", "5");
 
     const col = [];
     for (var i = 0; i < numberRegisters; i++) {
@@ -40,16 +45,14 @@ const generateTable = contents => {
       }
     }
 
-    const tHead = document.createElement("thead");
     const hRow = document.createElement("tr");
 
-    for (var i = 0; i < col.lenght; i++) {
+    for (var i = 0; i < col.length; i++) {
       const th = document.createElement("th");
       th.innerHTML = col[i];
       hRow.appendChild(th);
     }
-    tHead.appendChild(hRow);
-    table.appendChild(tHead);
+    table.appendChild(hRow);
 
     const tBody = document.createElement("tbody");
 

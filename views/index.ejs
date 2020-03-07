@@ -20,30 +20,19 @@
 
     <title>Mongo Explorer</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+ 
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark static-top">
       <div class="container">
-          <a class="navbar-brand" href="./index.html"> Juan sebastian Vaca</a>
+          <a class="navbar-brand" href="https://sebastianvaca99.github.io/Personal-Home-Page/"> Juan sebastian Vaca</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
                   <li class="nav-item active">
-                      <a class="nav-link" href="#Who-i-am">Who i am</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Education">My Education</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Hobbies">Hobbies</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#Contact">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                      <a aria-label="Github link 3" class="nav-link" href="./hojavida.html" target="_self"  rel="noreferrer">Skills</a>
+                      <a class="nav-link" href="#Explorer">Explorer</a>
                   </li>
               </ul>
           </div>
@@ -51,35 +40,68 @@
   </nav>
     <br>
     <br>
-    <br>
-    <br>
 
     <div class="container">
-      <div class="row">
-        <div class="col-md-8">
+      <h1>Mongo Explorer</h1>
+    <br>
+      <div class="row">      
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, assumenda sequi ab reiciendis velit ullam unde ducimus sapiente quia laboriosam saepe dolorem inventore in quaerat explicabo, ratione dolores culpa iusto.
+            The objective of the project is to make a mongo database explorer. The application must list all existing bds on a server, allow to select the bd and then list the collections on it. Once the collections are listed, one can be selected and will show the first 20 records in chronological order in that collection.
           </p>
+      </div>
+    </div>
+    <div class="container" id="Images">
+      <p>
+        Technologies used:
+      </p>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+            <img class="rounded" src="../images/mongodb.png" alt="mongo db"  />
+        </div>
+        <div class="col-sm-4">
+          <img class="rounded" src="../images/express.jpg" alt="express logo"  >
+        </div>
+        <div class="col-sm-4">
+          <img class="rounded" src="../images/node-logo.jpg" alt="node logo" >
         </div>
       </div>
     </div>
-     
-    <select id="bdropdown" class="ui fluid dropdown" onchange= traercol(); >
-      <option disabled selected value> -- select an option --</option>
-      <% databases.databases.forEach(database => { %>
-      <option> <%= database.name %> </option>
-      <% }); %>
-    </select>
-    <select id="cdropdown" class="ui fluid dropdown" onchange= traercontenido();>
-      <option disabled selected value> -- select an option --</option>
-    </select>
-    <ul id= "contentList">
-    </ul>
-    
-    <div id="myContacts">
+      <br>
+      <br>
+      <br>
 
+     <div class="container">
+      <h3>FUNCTIONALITIES</h3>
+      <br>
+       <div class="row">
+         <p>
+           Please select one of the following databases:
+         </p>
+         <br>
+        <select id="bdropdown" class="ui fluid dropdown" onchange= traercol(); >
+          <option disabled selected value> -- select an option --</option>
+          <% databases.databases.forEach(database => { %>
+          <option> <%= database.name %> </option>
+          <% }); %>
+        </select>
+       </div>
+     </div>
+     <br>
+     <div class="container">
+      <div class="row">
+        <p>
+          Please select one of the following collections of the databse selected:
+        </p>
+        <br>
+        <select id="cdropdown" class="ui fluid dropdown" onchange= traercontenido();>
+          <option disabled selected value> -- select an option --</option>
+        </select>
+      </div>
     </div>
-    </select>
+    <br>
+    <div class="container" id="myContacts">
+    </div>
     <div class="row">
 
       <%- include("./viewcontent.ejs") %>

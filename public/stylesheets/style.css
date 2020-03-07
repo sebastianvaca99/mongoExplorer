@@ -1,8 +1,11 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
+  background-image: url("paper.gif");
+  background-color: #cccccc;
+} 
 a {
   color: #00B7FF;
+}
+
+img.rounded{
+  width: 320px; height: 275px;
 }

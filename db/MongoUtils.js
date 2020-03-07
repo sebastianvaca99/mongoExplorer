@@ -34,7 +34,7 @@ function MongoUtils() {
         .finally(() => client.close());
     });
 
-  mu.databases.find = (dbName,colName) =>
+  mu.databases.find = (dbName, colName) =>
     mu.connect().then(client => {
       return client
         .db(dbName)
@@ -43,6 +43,15 @@ function MongoUtils() {
         .limit(20)
         .sort({ _id: -1 })
         .toArray()
+        .finally(() => client.close());
+    });
+
+  mu.databases.insert = (dbName, colName, item) =>
+    mu.connect().then(client => {
+      return client
+        .db(dbName)
+        .collection(colName)
+        .insertOne(item)
         .finally(() => client.close());
     });
 

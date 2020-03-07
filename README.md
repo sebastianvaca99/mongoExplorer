@@ -1,6 +1,6 @@
 # MongoExplorer
 
-Hello John, I am applying to the first deliverable version (exam+bonus+deployment). My creative component its that i create a look a like read me at the web site so , there i explain the tecnologies i used and the objective of the project.
+Hello John, I am applying to the first deliverable version (exam+bonus+deployment). My creative component its that i create a look a like read me at the web site so , there i explain the tecnologies i used and the objective of the project. 
 
 ![Foto de la pagina web](https://github.com/sebastianvaca99/Personal-Home-Page/blob/master/image.png)
 
@@ -15,12 +15,16 @@ Regarding the technologies, the ones used for this project were HTML, CSS, JAVAS
 ### How do you runt it
 After clonning the project.
 In the project directory, you can run:
-npm install
+
+### `npm install`
 Downloads all the dependencies.
 
-npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
+### `npm start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3001) to view it in the browser.
+
+### `npm run build`
 
 ### Author
 

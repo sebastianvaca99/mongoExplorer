@@ -1,6 +1,6 @@
 # MongoExplorer
 
-opcion 1 del examen
+Hello John, I am applying to the first deliverable version (exam+bonus+deployment). My creative component its that i create a look a like read me at the web site so , there i explain the tecnologies i used and the objective of the project.
 
 ![Foto de la pagina web](https://github.com/sebastianvaca99/Personal-Home-Page/blob/master/image.png)
 
@@ -13,10 +13,14 @@ The objective of the project is to make a mongo database explorer. The applicati
 Regarding the technologies, the ones used for this project were HTML, CSS, JAVASCRIPT, BOOTSTRAP, EXPRESS, NODE AND MONGODB.The text editor used for the development of my page was Visual Studio Code.
 
 ### How do you runt it
+After clonning the project.
+In the project directory, you can run:
+npm install
+Downloads all the dependencies.
 
-
-### Unique component
-My unique component its that i create a look a like read me at the web site so , there i explain the tecbologies i used and the objective of the project.
+npm start
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
 ### Author
 

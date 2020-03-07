@@ -2,7 +2,7 @@
 
 Hello John, I am applying to the first deliverable version (exam+bonus+deployment). My creative component its that i create a look a like read me at the web site so , there i explain the tecnologies i used and the objective of the project. 
 
-![Foto de la pagina web](https://github.com/sebastianvaca99/Personal-Home-Page/blob/master/image.png)
+![Foto de la pagina web](https://github.com/sebastianvaca99/mongoExplorer/blob/master/image.png?raw=true)
 
 * [Website app](https://mongodbexplorer.herokuapp.com/)
 
